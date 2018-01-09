@@ -1,0 +1,18 @@
+ 
+
+ {% extends 'crud/base.html' %}
+
+
+ {% block title_block %} {{ schools.name }} Detail Information {% endblock %}
+
+ {% block body_block %}
+
+ 	<h3>Name: {{ schools.name }}</h3>
+ 	<h3>Location: {{ schools.location }}</h3>
+ 	<h3>Principal: {{ schools.principal }}</h3>
+ 	<h3># of students: {{ schools.number_of_students }}</h3>
+
+ 	<a href="{% url 'schools:school_update' pk=schools.pk %}" class="btn btn-success">Update Information</a>
+ 	<a href="{% url 'schools:school_delete' pk=schools.pk %}" class="btn btn-danger">Delete School</a>
+
+ {% endblock %}

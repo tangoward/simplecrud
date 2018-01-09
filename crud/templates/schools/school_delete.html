@@ -1,0 +1,18 @@
+
+{% extends 'crud/base.html' %}
+
+{% block title_block %} {{ school.name }} Delete {% endblock %}
+
+
+{% block body_block %}
+
+	<h3>Delete {{ school.name }}?</h3>
+	<h4>All information will be lost and cannot be undone. </h4>
+
+
+	<form method="post">
+		{% csrf_token %}
+		<input type="submit" name="submit" value="Yes, delete it." class="btn btn-primary">
+		
+	</form>
+{% endblock %}
